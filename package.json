@@ -1,44 +1,47 @@
 {
-  "name": "nach2",
-  "description": "nACH is a highly customizable Node.js module exposing a high & low-level API for generating ACH files for use within the ACH network",
-  "version": "0.5.1",
-  "keywords": [
-    "ACH",
-    "file",
-    "Automated Clearing House"
-  ],
-  "contributors": [
-    {
-      "name": "Glen Selle",
-      "email": "glenselle@me.com"
+    "name": "nacha-cheese",
+    "type": "module",
+    "version": "0.0.1",
+    "keywords": [
+        "ACH",
+        "file",
+        "Automated Clearing House"
+    ],
+    "contributors": [
+        {
+            "name": "Ben Fox",
+            "email": "ben@lunchpayments.com"
+        }
+    ],
+    "engines": {
+        "node": ">= 0.10.0"
     },
-    {
-      "name": "Tom Horner",
-      "email": "tom.horner@zipline.co"
+    "main": "dist/nacha.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec"
     },
-    {
-      "name": "Yaw Joseph Etse",
-      "email": "yaw.etse@gmail.com",
-      "url": "http://about.me/yawjosephetse"
+    "dependencies": {
+        "async": "^2.0.1",
+        "date-fns": "^3.6.0",
+        "lodash": "^4.14.1",
+        "moment": "^2.14.1",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.8.0",
+        "@types/chai": "^4.3.17",
+        "@types/mocha": "^10.0.7",
+        "@types/node": "^22.2.0",
+        "chai": "^5.1.1",
+        "eslint": "^9.8.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "mocha": "latest",
+        "prettier": "^3.3.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^8.0.1"
     }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zipline/nACH.git"
-  },
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "scripts": {
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec --recursive"
-  },
-  "dependencies": {
-    "async": "^2.0.1",
-    "lodash": "^4.14.1",
-    "moment": "^2.14.1"
-  },
-  "devDependencies": {
-    "mocha": "latest",
-    "chai": "latest"
-  }
 }
